@@ -54,7 +54,7 @@ class Goods(models.Model):
     商品
     """
     category = models.ForeignKey(GoodsCategory, verbose_name='商品类目', on_delete=models.CASCADE)
-    goods_sn = models.CharField(max_lenth=50, default='', verbose_name='商品唯一货号')
+    goods_sn = models.CharField(max_length=50, default='', verbose_name='商品唯一货号')
     name = models.CharField(max_length=100, verbose_name=100)
     click_num = models.IntegerField(default=0, verbose_name='点击数')
     sold_num = models.IntegerField(default=0, verbose_name='商品销售量')
@@ -101,7 +101,7 @@ class GoodsImage(models.Model):
     """
     goods = models.ForeignKey(Goods, verbose_name='商品', related_name='images', on_delete=models.CASCADE)
     image = models.ImageField(upload_to='', verbose_name='图片', null=True, blank=True)
-    add_time = models.DateTimeField(dfault=datetime.now, verbose_name='添加时间')
+    add_time = models.DateTimeField(default=datetime.now, verbose_name='添加时间')
 
     class Meta:
         verbose_name = '商品主图'
