@@ -38,7 +38,7 @@ class GoodsCategoryBrand(models.Model):
                                  verbose_name='商品类目', on_delete=models.CASCADE)
     name = models.CharField(default='', max_length=30, verbose_name='品牌名', help_text='品牌名')
     desc = models.TextField(default='', max_length=200, verbose_name='品牌描述', help_text='品牌描述')
-    image = models.ImageField(max_length=200, upload_to='brands/')
+    image = models.ImageField(max_length=200, upload_to='brands/', verbose_name='品牌LOGO')
     add_time = models.DateTimeField(default=datetime.now, verbose_name='添加时间')
 
     class Meta:
@@ -55,7 +55,7 @@ class Goods(models.Model):
     """
     category = models.ForeignKey(GoodsCategory, verbose_name='商品类目', on_delete=models.CASCADE)
     goods_sn = models.CharField(max_length=50, default='', verbose_name='商品唯一货号')
-    name = models.CharField(max_length=100, verbose_name=100)
+    name = models.CharField(max_length=100, verbose_name='商品名')
     click_num = models.IntegerField(default=0, verbose_name='点击数')
     sold_num = models.IntegerField(default=0, verbose_name='商品销售量')
     fav_num = models.IntegerField(default=0, verbose_name='商品收藏量')
@@ -85,7 +85,7 @@ class IndexAd(models.Model):
     """
     category = models.ForeignKey(GoodsCategory, related_name='category', verbose_name='商品类目',
                                  on_delete=models.CASCADE)
-    goods = models.ForeignKey(Goods, related_name='goods', on_delete=models.CASCADE)
+    goods = models.ForeignKey(Goods, related_name='goods', on_delete=models.CASCADE, verbose_name='商品')
 
     class Meta:
         verbose_name = '首页商品类别广告'
