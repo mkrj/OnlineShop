@@ -53,6 +53,7 @@ class OrderInfo(models.Model):
 
     class Meta:
         verbose_name = '订单'
+        verbose_name_plural = verbose_name
 
     def __str__(self):
         return str(self.order_sn)
