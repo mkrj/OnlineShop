@@ -1,9 +1,9 @@
-*.pyc
-.idea/
+.idea
+.git
 __pycache__/
 
 # virtualenv
 .venv/
-venv
+venv/
 
 deployment/

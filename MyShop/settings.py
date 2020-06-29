@@ -27,7 +27,7 @@ sys.path.insert(0, os.path.join(BASE_DIR, 'extra_apps'))
 SECRET_KEY = 'j0!8a$urzu@ba)iqik5k4wof90=l^4p&1@gup*xt972^%n2&dg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -92,8 +92,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'myshop',
         'USER': 'root',
-        'PASSWORD': 'root',
-        'HOST': '127.0.0.1',
+        'HOST': 'mysql',
+        'PASSWORD': '123456',
         'OPTIONS': {'init_command': 'set default_storage_engine=INNODB;'}
     }
 }
