@@ -36,8 +36,16 @@ alias py37='docker run --rm -v "$PWD":/usr/src/myapp -p 8000:8000 --network mysh
 这样，每次命令行调试时候，就可以省却写前面长长的命令了
 
 ### 用法示例
-在本地启动项目：
+#### 在本地启动项目
 ```
 docker-compose up -d
 py37 pipenv run python manage.py runserver 0.0.0.0:8000
 ```
+
+### QA
+#### 如何通过 docker 创建 superuser?
+启动项目后, 运行命令 `docker exec -it your_project_containerID pipenv run python manage.py createsuperuser`
+然后就进入到交互式操作环境中，输入 user, mail, password，就创建成功了
+
+#### 如何查看项目的容器 ID？
+运行命令 `docker ps`，显示全部正在运行的容器
