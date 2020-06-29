@@ -1,0 +1,35 @@
+version: '3.7'
+services:
+  redis:
+    image: redis:5
+    restart: 'no'
+    volumes:
+      - ./deployment/redis/data:/data
+    ports:
+      - '6379:6379'
+  mongo:
+    image: mongo:4.0-xenial
+    restart: 'no'
+    volumes:
+      - ./deployment/mongo/data:/data/db
+    ports:
+      - '27017:27017'
+    command: --bind_ip 0.0.0.0
+  mysql:
+    image: mysql:5.7
+    restart: 'no'
+    environment:
+      MYSQL_ROOT_PASSWORD: '123456'
+    volumes:
+      - ./deployment/mysql/data:/var/lib/mysql
+    ports: 
+      - '3306:3306'
+  adminer:
+    image: adminer
+    environment:
+      ADMINER_DEFAULT_SERVER: 'mysql'
+    ports:
+      - '8080:8080'
+    depends_on:
+      - mysql
+
