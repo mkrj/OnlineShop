@@ -1,0 +1,31 @@
+[[source]]
+name = "pypi"
+url = "https://mirrors.aliyun.com/pypi/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+django-filter = "==2.2.0"
+djangorestframework = "==3.6.3"
+importlib-metadata = "==1.6.0"
+mysqlclient = "==1.4.6"
+pytz = "==2020.1"
+sqlparse = "==0.3.1"
+zipp = "==3.1.0"
+django-crispy-forms = "*"
+django-import-export = "*"
+django-reversion = "*"
+django-formtools = "*"
+future = "*"
+httplib2 = "*"
+six = "*"
+xlwt = "*"
+requests = "*"
+Django = "==2.0"
+Markdown = "==3.2.2"
+Pillow = "==7.1.2"
+XlsxWriter = "*"
+
+[requires]
+python_version = "3.7"
