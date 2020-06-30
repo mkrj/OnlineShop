@@ -7,7 +7,6 @@ verify_ssl = true
 
 [packages]
 django-filter = "==2.2.0"
-djangorestframework = "==3.6.3"
 importlib-metadata = "==1.6.0"
 mysqlclient = "==1.4.6"
 pytz = "==2020.1"
@@ -22,10 +21,11 @@ httplib2 = "*"
 six = "*"
 xlwt = "*"
 requests = "*"
-Django = "==2.0"
+Django = "==2.2"
 Markdown = "==3.2.2"
 Pillow = "==7.1.2"
 XlsxWriter = "*"
+djangorestframework = "==3.8.2"
 
 [requires]
 python_version = "3.7"
