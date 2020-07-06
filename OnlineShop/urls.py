@@ -1,4 +1,4 @@
-"""MyShop URL Configuration
+"""OnlineShop URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.0/topics/http/urls/
@@ -19,7 +19,7 @@ from rest_framework.routers import DefaultRouter
 from django.views.static import serve
 
 from goods.views import GoodsListViewSet, CategoryViewSet, HotSearchViewSet, BannerViewSet, IndexCategoryViewSet
-from MyShop.settings import MEDIA_ROOT
+from OnlineShop.settings import MEDIA_ROOT
 
 router = DefaultRouter()
 

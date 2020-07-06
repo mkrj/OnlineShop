@@ -9,8 +9,8 @@ class BaseSetting(object):
 
 
 class GlobalSettings(object):
-    site_title = '后台管理系统'
-    site_footer = 'myshop'
+    site_title = '商城后台管理系统'
+    site_footer = 'Online Shop System'
 
 
 class VerifyCodeAdmin(object):
