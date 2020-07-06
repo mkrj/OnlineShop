@@ -34,7 +34,7 @@
 - 设置快捷短语 
 
 ```
-alias py37='docker run --rm -v "$PWD":/usr/src/myapp -p 8000:8000 --network myshop_default -w /usr/src/myapp -e PIPENV_VENV_IN_PROJECT=true python:3.7-pipenv'`
+alias py37='docker run --rm -v "$PWD":/usr/src/myapp -p 8000:8000 --network onlineshop_default -w /usr/src/myapp -e PIPENV_VENV_IN_PROJECT=true python:3.7-pipenv'`
 ```
 - 保存之后 source 
 
@@ -42,6 +42,15 @@ alias py37='docker run --rm -v "$PWD":/usr/src/myapp -p 8000:8000 --network mysh
 
 ### 用法示例
 #### 在本地启动项目
+##### 初次运行
+**记得要创建相应数据库**
+```
+docker-compose up -d
+py37 pipenv install
+py37 pipenv run python manage.py migrate
+py37 pipenv run python manage.py runserver 0.0.0.0:8000
+```
+##### 非初次运行
 ```
 docker-compose up -d
 py37 pipenv run python manage.py runserver 0.0.0.0:8000
