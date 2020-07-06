@@ -1,6 +1,6 @@
-Django==2.0
+Django==2.2
 django-filter==2.2.0
-djangorestframework==3.6.3
+djangorestframework==3.8.2
 importlib-metadata==1.6.0
 Markdown==3.2.2
 mysqlclient==1.4.6

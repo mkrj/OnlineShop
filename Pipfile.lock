@@ -175,6 +175,7 @@
         },
         "openpyxl": {
             "hashes": [
+                "sha256:d88dd1480668019684c66cfff3e52a5de4ed41e9df5dd52e008cbf27af0dbf87",
                 "sha256:6e62f058d19b09b95d20ebfbfb04857ad08d0833190516c1660675f699c6186f"
             ],
             "version": "==3.0.4"
