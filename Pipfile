@@ -23,7 +23,7 @@ xlwt = "*"
 requests = "*"
 Django = "==2.2"
 Markdown = "==3.2.2"
-Pillow = "==7.1.2"
+Pillow = "==9.3.0"
 XlsxWriter = "*"
 djangorestframework = "==3.8.2"
 
